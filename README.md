@@ -37,8 +37,7 @@ Add or update the configuration with the following content:
                 "/Users/rifat/PersonalProjects/mcp/demo-mcp/build/index.js"
             ],
             "env": {
-                "BASE_API_URL": "<BASE_API_URL>",
-                "API_AUTH_TOKEN": "<API_AUTH_TOKEN>" # right now we are not using this
+                "BASE_API_URL": "<BASE_API_URL>"
             }
         }
     }
