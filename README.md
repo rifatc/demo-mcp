@@ -34,7 +34,7 @@ Add or update the configuration with the following content:
         "r-mcp": {
             "command": "node",
             "args": [
-                "/Users/rifat/PersonalProjects/mcp/demo-mcp/build/index.js"
+                "absolute/path/to/demo-mcp/build/index.js"
             ],
             "env": {
                 "BASE_API_URL": "<BASE_API_URL>"
@@ -53,7 +53,7 @@ Ensure the file is saved after making the changes.
 The Demo MCP exposes the following tools:
 
 1. **get_pitch**  
-   - **Description**: Retrieves the marketing pitch associated with a specific campaign ID or SLUG.  
+   - **Description**: Retrieves the marketing pitch associated with a specific campaign ID or SLUG in markdown format.  
    - **Input Schema**:  
      ```json
      {
@@ -62,7 +62,7 @@ The Demo MCP exposes the following tools:
      ```
 
 2. **get_kiis**  
-   - **Description**: Retrieves the Key Investor Information Sheets (KIIS) for a specific campaign ID or SLUG.  
+   - **Description**: Retrieves the Key Investor Information Sheets (KIIS) for a specific campaign ID or SLUG in markdown format.  
    - **Input Schema**:  
      ```json
      {
@@ -71,7 +71,7 @@ The Demo MCP exposes the following tools:
      ```
 
 3. **get_marketing_materials**  
-   - **Description**: Retrieves the marketing materials associated with a specific campaign ID or SLUG.  
+   - **Description**: Retrieves the marketing materials associated with a specific campaign ID or SLUG in markdown format.  
    - **Input Schema**:  
      ```json
      {
