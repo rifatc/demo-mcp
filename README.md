@@ -43,6 +43,8 @@ Add or update the configuration with the following content:
     }
 }
 ```
+<img width="1136" alt="image" src="https://github.com/user-attachments/assets/e7bbf0d4-e5c5-447a-81c6-39f3ee469ff3" />
+
 
 Ensure the file is saved after making the changes.
 
