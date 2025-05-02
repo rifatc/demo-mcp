@@ -31,7 +31,7 @@ Add or update the configuration with the following content:
 ```json
 {
     "mcpServers": {
-        "r-mcp": {
+        "r-marvin": {
             "command": "node",
             "args": [
                 "absolute/path/to/demo-mcp/build/index.js"

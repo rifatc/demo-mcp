@@ -3,13 +3,13 @@ import type {McpServer} from "@modelcontextprotocol/sdk/server/mcp.js";
 import {callCampaignApi} from "../utils/apiHelper.js";
 
 const marketingMaterialsSchema = z.object({
-    campaign_id: z.string().describe("The unique identifier for the campaign. Can be a integer ID or string SLUG."),
+    campaign_id: z.string().describe("The unique identifier for the campaign. Can be a integer ID or string SLUG (string in all downcase)."),
 });
 
 export function registerGetMarketingMaterialsTool(server: McpServer) {
     server.tool(
         "get_marketing_materials",
-        "Retrieves the marketing materials associated with a specific campaign ID or SLUG.",
+        "Retrieves the marketing materials associated with a specific campaign ID or SLUG (string in all downcase).",
         marketingMaterialsSchema.shape,
         async (args) => {
             const validatedArgs = marketingMaterialsSchema.parse(args);

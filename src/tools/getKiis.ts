@@ -3,13 +3,13 @@ import type {McpServer} from "@modelcontextprotocol/sdk/server/mcp.js";
 import {callCampaignApi} from "../utils/apiHelper.js";
 
 const kiisSchema = z.object({
-    campaign_id: z.string().describe("The unique identifier for the campaign. Can be a integer ID or string SLUG."),
+    campaign_id: z.string().describe("The unique identifier for the campaign. Can be a integer ID or string SLUG (string in all downcase)."),
 });
 
 export function registerGetKiisTool(server: McpServer) {
     server.tool(
         "get_kiis",
-        "Retrieves the Key Investor Information Sheets (KIIS) for a specific campaign ID or SLUG.",
+        "Retrieves the Key Investor Information Sheets (KIIS) for a specific campaign ID or SLUG (string in all downcase).",
         kiisSchema.shape,
         async (args) => {
             const validatedArgs = kiisSchema.parse(args);

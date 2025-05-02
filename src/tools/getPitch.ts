@@ -3,13 +3,13 @@ import type {McpServer} from "@modelcontextprotocol/sdk/server/mcp.js"; // Use t
 import {callCampaignApi} from "../utils/apiHelper.js"; // Import the helper
 
 const pitchSchema = z.object({
-    campaign_id: z.string().describe("The unique identifier for the campaign."),
+    campaign_id: z.string().describe("The unique identifier for the campaign. Can be a integer ID or string SLUG (string in all downcase)."),
 });
 
 export function registerGetPitchTool(server: McpServer) {
     server.tool(
         "get_pitch",
-        "Retrieves the marketing pitch associated with a specific campaign ID or SLUG.",
+        "Retrieves the marketing pitch associated with a specific campaign ID or SLUG (string in all downcase).",
         pitchSchema.shape,
         async (args) => {
             // Validate args using the schema (McpServer might do this already, but explicit is good)
